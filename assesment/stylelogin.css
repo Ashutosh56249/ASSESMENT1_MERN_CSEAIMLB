@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff6f91, #ff9671, #ffc75f, #f9f871);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+ 
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .login-container:hover {
+    transform: scale(1.02);
+  }
+  
+  h2 {
+    color: #333333;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    color: #666666;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    text-align: left;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #ff6f91;
+    background-color: #ffffff;
+    outline: none;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #00c9ff, #92fe9d);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background: linear-gradient(135deg, #92fe9d, #00c9ff);
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="submit"]:active {
+    transform: translateY(0px);
+  }
+  
+  .error {
+    font-size: 0.8rem;
+    color: #e63946;
+    margin-top: -0.8rem;
+    margin-bottom: 0.8rem;
+    display: block;
+    text-align: left;
+  }
+  
